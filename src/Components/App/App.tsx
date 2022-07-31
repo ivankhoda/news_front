@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router";
 import { HashRouter } from "react-router-dom";
 import "../../style.scss";
 import { Blanc } from "../blanc/Blanc";
-import { NewsPost } from "../Dialog/NewsPost";
 import { Header } from "../Header/Header";
+import { NewsPost } from "../NewsPost/NewsPost";
 
 import { NewsContainer } from "../News/NewsContainer";
 

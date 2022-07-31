@@ -24,6 +24,7 @@ export const NewsContainer = () => {
   };
 
   useEffect(() => {
+    let cleanupFunction = false;
     const getData = async () => {
       const newsData = await fetch(`${process.env.BASE_URL}/news`, {
         method: "GET",
@@ -42,6 +43,8 @@ export const NewsContainer = () => {
       getData();
     });
     getData();
+
+    cleanupFunction = true;
   }, []);
 
   const onClick = async (item: NewsProps) => {

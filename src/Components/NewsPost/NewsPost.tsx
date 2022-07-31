@@ -15,6 +15,7 @@ export const NewsPost = () => {
   });
   const channel = pusher.subscribe("posts-channel");
   useEffect(() => {
+    let cleanupFunction = false;
     const getData = async () => {
       const getMessagesData = async (id: any) =>
         fetch(`${process.env.BASE_URL}/news/${id}`, {
@@ -29,6 +30,7 @@ export const NewsPost = () => {
     });
 
     getData();
+    cleanupFunction = true;
   }, []);
 
   return newsPost ? (
