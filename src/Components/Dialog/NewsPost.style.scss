@@ -1,0 +1,31 @@
+.news-post {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.dialog__messages {
+  background-color: white;
+  border: 1px solid rgb(75, 186, 194);
+  max-height: 300px;
+  max-width: 70%;
+  overflow: scroll;
+}
+.news-post {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "PostImage PostText"
+    "PostImage PostText";
+}
+
+.news-post__image {
+  max-width: 250px;
+  grid-area: PostImage;
+}
+.news-post__text {
+  grid-area: PostText;
+  // display: flex;
+}
+.news-post__title {
+  max-height: 100px;
+}
