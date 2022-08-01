@@ -21,6 +21,7 @@ export const NewsComponent = (props: NewsProps) => {
     <>
       <div className="news-wrapper">
         <div className="news" key={id} onClick={() => getInfo(id)}>
+          <p className="news__date">{created_at}</p>
           <img className="news__image" src={link} />
           <div className="news__text">
             <h3 className="news__title">{title}</h3>

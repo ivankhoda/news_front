@@ -2,24 +2,23 @@ import React from "react";
 import { Route, Routes } from "react-router";
 import { HashRouter } from "react-router-dom";
 import "../../style.scss";
-import { Blanc } from "../blanc/Blanc";
 import { Header } from "../Header/Header";
 import { NewsPost } from "../NewsPost/NewsPost";
 
 import { NewsContainer } from "../News/NewsContainer";
 
+import { Main } from "../Main/Main";
+import { NotFound } from "../NotFound/NotFoundPage";
 import { Sidebar } from "../Sidebar/Sidebar";
 import { WorkingPanel } from "../WorkingPanel/WorkingPanel";
 import "./App.style.scss";
 
 export const App = () => {
   const routes = [
-    { path: "/", name: "Main", Component: <Blanc /> },
+    { path: "/", name: "Main", Component: <Main /> },
     { path: "/news", name: "News", Component: <NewsContainer /> },
     { path: "/news/news/:id", name: "NewsPost", Component: <NewsPost /> },
-    { path: "/assignees", name: "Assignees", Component: <Blanc /> },
-    { path: "/categories", name: "Categories", Component: <Blanc /> },
-    { path: "/services", name: "Services", Component: <Blanc /> },
+    { path: "/*", name: "NotFound", Component: <NotFound /> },
   ];
 
   return (

@@ -5,7 +5,7 @@ import "./Sidebar.style.scss";
 export const Sidebar = () => {
   return (
     <div className="Sidebar">
-      <h2>Autoservice</h2>
+      <h2>NewsNews</h2>
 
       <Menu />
     </div>

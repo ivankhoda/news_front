@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { DashBoardIcon } from "./DashboardIcon";
+
 import "./Link.style.scss";
 
 type LinkProps = {
@@ -13,7 +13,7 @@ export const MenuItem = (props: LinkProps) => {
 
   return (
     <Link to={`${linkTo}`} className="MenuItem">
-      <DashBoardIcon type={text} /> {text}
+      {text}
     </Link>
   );
 };
