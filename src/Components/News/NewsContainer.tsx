@@ -25,8 +25,9 @@ export const NewsContainer = () => {
 
   useEffect(() => {
     let cleanupFunction = false;
+
     const getData = async () => {
-      const newsData = await fetch(`${process.env.BASE_URL}/news`, {
+      const newsData = await fetch(`${process.env.BASE_URL}/news?`, {
         method: "GET",
       });
       const newsDataResponse = await newsData.json();
