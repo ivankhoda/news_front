@@ -53,7 +53,9 @@ export const NewsContainer = () => {
     });
     getData();
 
-    cleanupFunction = true;
+    return () => {
+      cleanupFunction = true;
+    };
   }, [range]);
 
   const onClick = async (item: NewsProps) => {

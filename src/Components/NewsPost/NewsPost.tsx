@@ -30,7 +30,9 @@ export const NewsPost = () => {
     });
 
     getData();
-    cleanupFunction = true;
+    return () => {
+      cleanupFunction = true;
+    };
   }, []);
 
   return newsPost ? (
