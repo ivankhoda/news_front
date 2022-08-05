@@ -8,7 +8,6 @@ import { NewsPostComponent } from "./NewsPostComponent";
 
 export const NewsPost = () => {
   const [newsPost, setNewsPost] = useState<NewsProps>();
-
   const { id } = useParams();
   const pusher = new Pusher(`${process.env.PUSHER_APPKEY}`, {
     cluster: "eu",
